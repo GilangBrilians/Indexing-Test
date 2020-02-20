@@ -1166,8 +1166,8 @@ NATURAL JOIN work
 WHERE contract <= 3 and employee_name LIKE '___'
 ORDER BY contract DESC;
 
-create index querry 
-on work (employee_id,job_title);
+create index querry1
+on employee (employee_id,employee_name,address);
 
 create index querry2
 on employee(employee_id,address);
@@ -1177,7 +1177,3 @@ on job(job_title,salary);
 
 create index query4
 on work(contract,job_title);
-
-
-create index query5 
-on work(contract,job_title,employee_id);
